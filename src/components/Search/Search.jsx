@@ -23,11 +23,11 @@ const Search = () => {
         isDuplicate = newHeroes.find((hero) => hero.id === usersHero.id);
 
         if (!isDuplicate) {
-          setNewHeroes([...newHeroes, usersHero]); // Update newHeroesArr state
+          setNewHeroes([...newHeroes, usersHero]);
         }
       }
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
     setUserInput("");
   };
@@ -41,6 +41,7 @@ const Search = () => {
           type="text"
           value={userInput}
           onChange={handleInputChange}
+          name={userInput}
         ></input>
         <button className={styles.btn} type="submit">
           Search

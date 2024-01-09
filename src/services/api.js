@@ -9,7 +9,6 @@ export const fetchRandomHeroes = async () => {
     return data;
   } catch (error) {
     console.log(error);
-    // obsluga bledow
   }
 };
 
@@ -19,6 +18,9 @@ export const searchByName = async (name) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error(error);
+    console.log(error);
   }
 };
+
+// "This is a Superhero card generator, please enter the name of your favorite character or refresh the page."
+// "We can't find the hero you were looking for. Please try again."
