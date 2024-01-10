@@ -5,7 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HeroesList from "./components/HeroesList/HeroesList.jsx";
-import RandomHeroes from "./components/RandomHeroes/RandomHeroes";
 import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
 import HeroDetails from "./components/HeroDetails/HeroDetails.jsx";
 
@@ -19,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <RandomHeroes />,
+        element: <HeroesList />,
       },
       {
         path: "/heroes-list",

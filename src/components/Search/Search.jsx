@@ -1,13 +1,15 @@
 import { useState } from "react";
 import styles from "./Search.module.css";
 import { searchByName } from "../../services/api";
-import Card from "../Card/Card";
+import { redirect } from "react-router-dom";
+import { useContext } from "react";
+import { HeroesContext } from "../Context/HeroesContext";
 
 let isDuplicate = false;
 
 const Search = () => {
+  const { heroes, addHero } = useContext(HeroesContext);
   const [userInput, setUserInput] = useState("");
-  const [newHeroes, setNewHeroes] = useState([]);
 
   const handleInputChange = (event) => {
     setUserInput(event.target.value);
@@ -20,10 +22,11 @@ const Search = () => {
       const usersHero = data.results[0];
 
       if (usersHero) {
-        isDuplicate = newHeroes.find((hero) => hero.id === usersHero.id);
+        isDuplicate = heroes.find((hero) => hero.id === usersHero.id);
 
         if (!isDuplicate) {
-          setNewHeroes([...newHeroes, usersHero]);
+          addHero(usersHero);
+          redirect("/heroses-list");
         }
       }
     } catch (error) {
@@ -50,19 +53,6 @@ const Search = () => {
       {isDuplicate && (
         <p className={styles.duplicateError}>You already have this card.</p>
       )}
-      <div className={styles.cardWrapper}>
-        <div className={styles.newCardContainer}>
-          {newHeroes.map((hero) => (
-            <Card
-              key={hero.id}
-              id={hero.id}
-              name={hero.name}
-              powerstats={hero.powerstats}
-              image={hero.image}
-            />
-          ))}
-        </div>
-      </div>
     </div>
   );
 };

@@ -1,20 +1,20 @@
 import { Outlet } from "react-router-dom";
 import "./App.css";
 import Search from "./components/Search/Search";
+import { HeroesContextProvider } from "./components/Context/HeroesContext";
 
-function App() {
+const App = () => {
   return (
-    <div>
+    <HeroesContextProvider>
       <Search />
       <Outlet />
-    </div>
+    </HeroesContextProvider>
   );
-}
+};
 
 export default App;
 
 // to do:
-// -after the user searched his card, the others are deleted
 // -button generate random cards next to search that generates 3 cards again
 // -cards need to have a second side that shows the details of a character it needs to be done by react-router(cardsdetails)
 // -the chosen cards should be stored in an array in local storage, and have an icon that after clicking shows a list of cards img name total points
@@ -32,58 +32,3 @@ export default App;
 // not displaying card with no properties/no image
 
 // animation after clicking on the card like heartstone
-
-/*
-function App() {
-  return (
-    <div>
-      <HerosesContextProvider>
-        <Search />
-        <Outlet />
-      <HerosesContextProvider>
-    </div>
-  );
-}
-*/
-
-/*
-w Search:
-  import {redirect} from 'react-router-dom'
-  const { addHero  } = useContext(HerosesContext)
-
- const handleFormSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const data = await searchByName(userInput);
-      const usersHero = data.results[0];
-
-      if (usersHero) {
-        isDuplicate = newHeroes.find((hero) => hero.id === usersHero.id);
-
-        if (!isDuplicate) {
-          -------  setNewHeroes([...newHeroes, usersHero]); // usuwamy z kodu
-          addHero(usersHero) // to dodajemy
-          redirect('/heroses-list') // przenosimy usera na komponent HerosesList
-        }
-      }
-    } catch (error) {
-      console.error(error);
-    }
-    setUserInput("");
-  };
-
-*/
-
-/*
-w HerosesList:
-
-const {heroses, removeHero} = useContext(HerosesContext)
-
-<div>
- {heroses.map(hero => <div>
-    <p>{hero.title}</p>
-    <button onClick={() => removeHero(hero.id)}>Usuń</button>
-  </div>)}
-</div>
-
-*/
