@@ -1,7 +1,7 @@
 import { getRandomId } from "../utils/getRandomId";
 const url = `https://superheroapi.com/api.php/${process.env.REACT_APP_ACCESS_TOKEN}`;
 
-export const fetchRandomHeroes = async () => {
+export const fetchRandomHero = async () => {
   try {
     const randomId = getRandomId();
     const response = await fetch(`${url}/${randomId}`);
@@ -9,6 +9,7 @@ export const fetchRandomHeroes = async () => {
     return data;
   } catch (error) {
     console.log(error);
+    return null;
   }
 };
 
@@ -19,8 +20,6 @@ export const searchByName = async (name) => {
     return data;
   } catch (error) {
     console.log(error);
+    return null;
   }
 };
-
-// "This is a Superhero card generator, please enter the name of your favorite character or refresh the page."
-// "We can't find the hero you were looking for. Please try again."

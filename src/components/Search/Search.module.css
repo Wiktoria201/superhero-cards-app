@@ -17,7 +17,7 @@
   border-radius: 10px;
 }
 
-.duplicateError {
+.errorMessage {
   color: red;
   text-align: center;
   margin-bottom: 20px;
