@@ -16,7 +16,9 @@ export default App;
 
 // to do:
 // - not displaying cards without an image or stats
-// - if the user deletes all the cards display a message with a button / generate 3 new or search
 // - add the deck functionality
+
+// to fix:
+// - same message after deleting and onthe 1st load
 
 // animation after clicking on the card like heartstone
