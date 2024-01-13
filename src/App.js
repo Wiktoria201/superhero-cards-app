@@ -15,6 +15,7 @@ const App = () => {
 export default App;
 
 // to do:
+// - hero details
 // - not displaying cards without an image or stats
 // - add the deck functionality
 
