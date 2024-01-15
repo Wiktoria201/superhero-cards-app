@@ -7,6 +7,7 @@ const HeroDetails = () => {
   const { id } = useParams();
   const { heroes } = useContext(HeroesContext);
   const hero = heroes.find((hero) => hero.id === id);
+
   // redirect("/heroes-list");
   return (
     <div>
