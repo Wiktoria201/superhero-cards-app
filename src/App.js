@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import "./App.css";
+
 import Search from "./components/Search/Search";
 import { HeroesContextProvider } from "./components/Context/HeroesContext";
 
@@ -15,6 +15,8 @@ const App = () => {
 export default App;
 
 // to do:
+// After finish add env to gitignore
+// #454545 as a background color for the hwole app, #39ff14 of neon
 // - hero details
 // - not displaying cards without an image or stats
 // - add the deck functionality

@@ -24,15 +24,19 @@ const HeroesList = () => {
           </div>
         ) : (
           heroes.map((hero) => (
-            <div>
+            <div key={hero.id}>
               <Card
-                key={hero.id}
                 id={hero.id}
                 name={hero.name}
                 powerstats={hero.powerstats}
                 image={hero.image}
               />
-              <button onClick={() => removeHero(hero.id)}>Delete</button>
+              <button
+                onClick={() => removeHero(hero.id)}
+                className={styles.deleteBtn}
+              >
+                Delete
+              </button>
             </div>
           ))
         )}

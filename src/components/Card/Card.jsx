@@ -5,20 +5,28 @@ const Card = ({ id, name, image, powerstats }) => {
   return (
     <Link to={`/heroes/${id}`} className={styles.linkStyle}>
       <div className={styles.card}>
-        <img className={styles.heroImage} src={image.url} alt={name} />
+        {image && (
+          <img className={styles.heroImage} src={image.url} alt={name} />
+        )}
         <h2 className={styles.heroName}>{name}</h2>
         <div className={styles.heroStats}>
           <p className={styles.statsNames}>
             Power:{" "}
-            <span className={styles.statsNumbers}>{powerstats.power}</span>
+            <span className={styles.statsNumbers}>
+              {powerstats && powerstats.power}
+            </span>
           </p>
           <p className={styles.statsNames}>
             Speed:{" "}
-            <span className={styles.statsNumbers}>{powerstats.speed}</span>
+            <span className={styles.statsNumbers}>
+              {powerstats && powerstats.speed}
+            </span>
           </p>
           <p className={styles.statsNames}>
             Strength:{" "}
-            <span className={styles.statsNumbers}>{powerstats.strength}</span>
+            <span className={styles.statsNumbers}>
+              {powerstats && powerstats.strength}
+            </span>
           </p>
         </div>
       </div>
