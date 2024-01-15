@@ -1,1 +1,19 @@
+.btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #39ff14;
+  color: #39ff14;
+  background-color: #454545;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
 
+@media screen and (min-width: 1020px) {
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+  }
+}
