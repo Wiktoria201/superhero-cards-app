@@ -23,6 +23,8 @@
   padding: 20px 20px 30px 20px;
   border-radius: 5px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  background-color: #454545;
+  color: #fff;
 }
 
 .btn {
@@ -35,10 +37,6 @@
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   font-weight: bold;
-  background-image: linear-gradient(45deg, #ff6b6b, #56ab2f);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
   text-align: center;
 }
 

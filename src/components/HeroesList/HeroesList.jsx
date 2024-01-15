@@ -30,6 +30,7 @@ const HeroesList = () => {
                 name={hero.name}
                 powerstats={hero.powerstats}
                 image={hero.image}
+                hero={hero}
               />
               <button
                 onClick={() => removeHero(hero.id)}
