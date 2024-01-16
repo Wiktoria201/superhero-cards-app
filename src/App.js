@@ -15,6 +15,10 @@ const App = () => {
 export default App;
 
 // to do:
+// -no image
+// -no stats
+// -error message displaying after the first load
+
 // After finish add env to gitignore
 // #454545 as a background color for the hwole app, #39ff14 of neon
 // - hero details
