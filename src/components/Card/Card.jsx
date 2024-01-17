@@ -11,19 +11,19 @@ const Card = ({ id, name, image, powerstats }) => {
         <h2 className={styles.heroName}>{name}</h2>
         <div className={styles.heroStats}>
           <p className={styles.statsNames}>
-            Power:{" "}
+            Power:
             <span className={styles.statsNumbers}>
               {powerstats && powerstats.power}
             </span>
           </p>
           <p className={styles.statsNames}>
-            Speed:{" "}
+            Speed:
             <span className={styles.statsNumbers}>
               {powerstats && powerstats.speed}
             </span>
           </p>
           <p className={styles.statsNames}>
-            Strength:{" "}
+            Strength:
             <span className={styles.statsNumbers}>
               {powerstats && powerstats.strength}
             </span>

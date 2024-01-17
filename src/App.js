@@ -18,11 +18,8 @@ export default App;
 // -no image
 // -no stats
 // -error message displaying after the first load
+// -after finishing add env to gitignore
 
-// After finish add env to gitignore
-// #454545 as a background color for the hwole app, #39ff14 of neon
-// - hero details
-// - not displaying cards without an image or stats
 // - add the deck functionality
 
 // to fix:

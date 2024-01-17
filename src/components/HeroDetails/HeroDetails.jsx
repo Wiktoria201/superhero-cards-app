@@ -48,7 +48,7 @@ const HeroDetails = () => {
 
         <div className={styles.heroStats}>
           <p className={styles.statsNames}>
-            Power:{" "}
+            Power:
             <span className={styles.statsNumbers}>{powerstats.power}</span>
           </p>
         </div>
