@@ -14,6 +14,8 @@ const Search = () => {
 
   const handleInputChange = (event) => {
     setUserInput(event.target.value);
+    setShowError(false);
+    isDuplicate = false;
   };
 
   const handleFormSubmit = async (event) => {
