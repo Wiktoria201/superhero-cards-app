@@ -2,9 +2,19 @@ import styles from "./HeroesList.module.css";
 import Card from "../Card/Card";
 import { useContext } from "react";
 import { HeroesContext } from "../Context/HeroesContext";
+import ErrorPage from "../ErrorPage/ErrorPage";
+import Loader from "../../utils/Loader/Loader";
 
 const HeroesList = () => {
-  const { heroes, removeHero } = useContext(HeroesContext);
+  const { heroes, removeHero, fetching, showError } = useContext(HeroesContext);
+
+  if (fetching) {
+    return <Loader />;
+  }
+
+  if (showError) {
+    return <ErrorPage />;
+  }
 
   return (
     <div className={styles.cardWrapper}>
