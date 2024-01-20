@@ -54,7 +54,6 @@
   border: 2px solid #a755c2;
   color: #a755c2;
   background-color: #fff;
-  /* background-color: #454545; */
   font-weight: bold;
   margin: 10px 108px;
   cursor: pointer;
@@ -67,6 +66,7 @@
     flex-direction: row;
     flex-wrap: wrap-reverse;
     width: 1110px;
+    gap: 40px;
   }
 
   .btn:hover {
@@ -75,10 +75,14 @@
   }
 
   .deleteBtn:hover {
-    /* transform: translateY(-3px);
-    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3); */
     border: 2px solid #a755c2;
     color: #fff;
     background-color: #a755c2;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .newCardContainer {
+    gap: 70px;
   }
 }

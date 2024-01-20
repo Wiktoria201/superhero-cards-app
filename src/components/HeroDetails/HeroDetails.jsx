@@ -26,7 +26,7 @@ const HeroDetails = () => {
       <div className={styles.heroInfo}>
         <div>
           <h3>Biography:</h3>
-          <p>Full Name: {biography.fullName}</p>
+          <p>Full Name: {biography.placeOfBirth}</p>
           <p>Alter Egos: {biography.alterEgos}</p>
         </div>
 
