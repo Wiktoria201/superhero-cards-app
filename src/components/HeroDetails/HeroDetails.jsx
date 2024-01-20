@@ -17,7 +17,6 @@ const HeroDetails = () => {
     hero;
 
   return (
-    // <div className={styles.wrapper}>
     <div className={styles.container}>
       <div className={styles.hero}>
         <img className={styles.image} src={image.url} alt={name} />
@@ -57,7 +56,6 @@ const HeroDetails = () => {
         </Link>
       </div>
     </div>
-    // </div>
   );
 };
 

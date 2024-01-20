@@ -14,15 +14,4 @@ const App = () => {
 
 export default App;
 
-// to do:
-// -no image
-// -no stats
-// -error message displaying after the first load
 // -after finishing add env to gitignore
-
-// - add the deck functionality
-
-// to fix:
-// - same message after deleting and onthe 1st load
-
-// animation after clicking on the card like heartstone
