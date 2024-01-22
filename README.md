@@ -8,7 +8,7 @@ https://clever-haupia-0a999e.netlify.app
 
 ### Technologies Used
 
-- **Frontend**: HTML, CSS, JavaScript, React.js
+- **Frontend**: HTML, CSS, JavaScript, React.js, API
 - **Hosting**: Netlify
 
 I also incorporated basic tests to ensure the reliability and functionality of the application. They can be found in utils folder.
