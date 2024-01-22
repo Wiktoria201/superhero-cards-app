@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { useContext } from "react";
 import { HeroesContext } from "../Context/HeroesContext";
 import styles from "./HeroDetails.module.css";
+import { getTotalPower } from "../../utils/getTotalPower";
 
 const HeroDetails = () => {
   const { id } = useParams();
@@ -10,11 +11,12 @@ const HeroDetails = () => {
   const hero = heroes.find((hero) => hero.id === id);
 
   if (!hero) {
-    return <div>Hero not found</div>;
+    return <p className={styles.errorMessage}>Hero not found</p>;
   }
 
   const { name, biography, appearance, work, connections, image, powerstats } =
     hero;
+  const totalPower = getTotalPower(powerstats);
 
   return (
     <div className={styles.container}>
@@ -24,36 +26,56 @@ const HeroDetails = () => {
       </div>
       <div className={styles.heroInfo}>
         <div>
-          <h3>Biography:</h3>
-          <p>Full Name: {biography.placeOfBirth}</p>
-          <p>Alter Egos: {biography.alterEgos}</p>
+          <p className={styles.miniHeading}>Biography:</p>
+          <div className={styles.details}>
+            <p>Full Name:</p>
+            <p className={styles.text}>{biography["full-name"]}</p>
+          </div>
+
+          <div className={styles.details}>
+            <p>Alter Egos:</p>
+            <p className={styles.text}>{biography["alter-egos"]}</p>
+          </div>
         </div>
 
         <div>
-          <h3>Appearance:</h3>
-          <p>Gender: {appearance.gender}</p>
-          <p>Eye Color: {appearance.eyeColor}</p>
+          <div>
+            <p className={styles.miniHeading}>Appearance:</p>
+          </div>
+          <div className={styles.details}>
+            <p>Gender:</p>
+            <p className={styles.text}>{appearance.gender}</p>
+          </div>
+          <div className={styles.details}>
+            <p>Seen:</p>
+            <p className={styles.text}>{biography["first-appearance"]}</p>
+          </div>
         </div>
 
         <div>
-          <h3>Work:</h3>
-          <p>Occupation: {work.occupation}</p>
+          <p className={styles.miniHeading}>Work:</p>
+          <div className={styles.details}>
+            <p>Occupation:</p>
+            <p className={styles.text}>{work.occupation}</p>
+          </div>
         </div>
 
         <div>
-          <h3>Connections:</h3>
-          <p>Relatives: {connections.relatives}</p>
+          <p className={styles.miniHeading}>Connections:</p>
+          <div className={styles.details}>
+            <p>Relatives:</p>
+            <p className={styles.text}>{connections.relatives}</p>
+          </div>
         </div>
-
-        <div className={styles.heroStats}>
-          <p className={styles.statsNames}>
-            Power:
-            <span className={styles.statsNumbers}>{powerstats.power}</span>
-          </p>
+        <div>
+          <div className={styles.details}>
+            <p className={styles.miniHeading}>Total Power:</p>
+            <p className={styles.miniHeading}>{totalPower}</p>
+          </div>
+          <Link to="/heroes-list" className={styles.link}>
+            <button className={styles.btn}>Go Back</button>
+          </Link>
         </div>
-        <Link to="/heroes-list">
-          <button className={styles.btn}>Go Back</button>
-        </Link>
       </div>
     </div>
   );
