@@ -27,7 +27,10 @@ const HeroesList = () => {
             </p>
             <button
               className={styles.btn}
-              onClick={() => window.location.reload()}
+              onClick={() =>
+                (window.location.href =
+                  "https://clever-haupia-0a999e.netlify.app")
+              }
             >
               Generate
             </button>
