@@ -1,4 +1,4 @@
-import { getTotalPower } from "./powerstatsUtils";
+import { getTotalPower } from "./getTotalPower";
 
 describe("getTotalPower", () => {
   test('should calculate total power with "null" values', () => {
