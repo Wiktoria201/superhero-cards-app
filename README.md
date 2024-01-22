@@ -11,4 +11,4 @@ https://clever-haupia-0a999e.netlify.app
 - **Frontend**: HTML, CSS, JavaScript, React.js, API
 - **Hosting**: Netlify
 
-I also incorporated basic tests to ensure the reliability and functionality of the application. They can be found in utils folder.
+I also incorporated basic tests to ensure the reliability and functionality of the application. They can be found in the utils folder.
