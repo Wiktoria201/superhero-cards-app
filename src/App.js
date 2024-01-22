@@ -13,5 +13,3 @@ const App = () => {
 };
 
 export default App;
-
-// -after finishing add env to gitignore
