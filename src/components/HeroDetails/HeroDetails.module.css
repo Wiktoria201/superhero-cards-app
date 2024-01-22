@@ -62,13 +62,13 @@
   padding: 10px 20px;
   border-radius: 10px;
   border: 2px solid #a755c2;
-  color: #fff;
-  background-color: #a755c2;
+  color: #a755c2;
+  background-color: #fff;
   font-weight: bold;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px 108px;
   cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  margin: 15px auto;
 }
 
 .link {
@@ -89,10 +89,16 @@
     max-height: 500px;
   }
 
-  .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+  .btn {
+    margin: 15px 0px 0px 0px;
   }
+
+  .btn:hover {
+    border: 2px solid #a755c2;
+    color: #fff;
+    background-color: #a755c2;
+  }
+
   .hero:hover {
     transform: translateY(-3px);
     box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
@@ -108,8 +114,5 @@
   .heroName {
     width: 400px;
     font-size: 32px;
-  }
-  .btn {
-    margin: 15px 0px 0px 0px;
   }
 }
