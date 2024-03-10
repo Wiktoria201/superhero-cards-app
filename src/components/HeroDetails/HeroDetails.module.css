@@ -1,52 +1,34 @@
-.container {
+.wrapper {
   display: flex;
   justify-content: center;
-  gap: 50px;
   align-items: center;
   margin-top: 40px;
-  color: #454545;
   flex-direction: column;
 }
 
-.hero {
-  position: relative;
+.heroInfo {
+  border-radius: 20px;
+  max-width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 20px 20px 0px 0px;
   transition: all 0.3s ease;
 }
 
-.image {
-  border-radius: 20px 20px 0 0;
-  width: 300px;
-  height: 360px;
-}
-
-.heroInfo {
-  width: 300px;
+.infoContainer {
   display: flex;
   gap: 20px;
   flex-direction: column;
 }
 
-.heroName {
-  width: 300px;
-  text-align: center;
-  border: 1px solid #ff785a;
-  box-shadow: 0px 0px 5px 5px #a755c2;
-  margin-bottom: 20px;
-  margin-top: 0px;
-  color: #454545;
-  position: absolute;
-  left: 0;
-  top: 92%;
-  background-color: #fff;
-  font-size: 24px;
-}
-
 .details {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+  gap: 25px;
 }
 
 .text {
@@ -75,7 +57,7 @@
 .btnContainer {
   display: flex;
   gap: 15px;
-  margin: 30px 0;
+  margin: 25px 0;
   justify-content: center;
   flex-direction: column;
 }
@@ -87,13 +69,14 @@
 
 @media screen and (min-width: 1020px) {
   .container {
+    display: flex;
     flex-direction: row;
-    align-items: start;
-    max-height: 500px;
+    gap: 50px;
   }
 
   .btnContainer {
     flex-direction: row;
+    margin: 0 0 20px 0;
   }
 
   .btn {
@@ -107,20 +90,14 @@
     background-color: #a755c2;
   }
 
-  .hero:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+  .heroInfo {
+    min-width: 30px;
+    max-width: 600px;
+    height: 550px;
   }
 
-  .image {
-    width: 400px;
-    height: 500px;
-  }
-  .heroInfo {
-    width: 400px;
-  }
-  .heroName {
-    width: 400px;
-    font-size: 32px;
+  .heroInfo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
   }
 }
