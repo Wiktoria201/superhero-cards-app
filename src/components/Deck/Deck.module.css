@@ -48,7 +48,7 @@
 .heroItem {
   border: 1px solid #fff;
   width: 100%;
-  padding: 7px 10px;
+  padding: 10px;
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
@@ -75,6 +75,7 @@
   border-radius: 10px;
   font-weight: bold;
   margin-top: 30px;
+  transition: all 0.5s;
 }
 
 @media screen and (min-width: 1020px) {
@@ -94,5 +95,10 @@
 
   .deckIcon {
     top: 15px;
+  }
+
+  .clearBtn:hover {
+    background-color: #fff;
+    color: #a755c2;
   }
 }

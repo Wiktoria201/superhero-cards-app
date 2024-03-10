@@ -7,7 +7,7 @@ import { getTotalPower } from "../../utils/getTotalPower";
 
 const HeroDetails = () => {
   const { id } = useParams();
-  const { heroes } = useContext(HeroesContext);
+  const { heroes, addToDeck } = useContext(HeroesContext);
   const hero = heroes.find((hero) => hero.id === id);
 
   if (!hero) {
@@ -72,9 +72,14 @@ const HeroDetails = () => {
             <p className={styles.miniHeading}>Total Power:</p>
             <p className={styles.miniHeading}>{totalPower}</p>
           </div>
-          <Link to="/heroes-list" className={styles.link}>
-            <button className={styles.btn}>Go Back</button>
-          </Link>
+          <div className={styles.btnContainer}>
+            <Link to="/heroes-list">
+              <button className={styles.btn}>Go Back</button>
+            </Link>
+            <button className={styles.btn} onClick={() => addToDeck(hero)}>
+              Add to Deck
+            </button>
+          </div>
         </div>
       </div>
     </div>

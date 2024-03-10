@@ -65,16 +65,19 @@
   color: #a755c2;
   background-color: #fff;
   font-weight: bold;
-  margin: 10px 108px;
   cursor: pointer;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  text-wrap: nowrap;
+  width: 300px;
 }
 
-.link {
+.btnContainer {
   display: flex;
-  justify-content: flex-end;
-  text-decoration: none;
+  gap: 15px;
+  margin: 30px 0;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .errorMessage {
@@ -89,8 +92,13 @@
     max-height: 500px;
   }
 
+  .btnContainer {
+    flex-direction: row;
+  }
+
   .btn {
     margin: 15px 0px 0px 0px;
+    width: 120px;
   }
 
   .btn:hover {
