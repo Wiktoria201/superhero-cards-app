@@ -40,7 +40,7 @@ const Search = () => {
   };
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <form className={styles.searchForm} onSubmit={handleFormSubmit}>
         <input
           className={styles.input}

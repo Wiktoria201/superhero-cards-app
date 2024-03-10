@@ -9,6 +9,7 @@
 
 .input {
   padding: 10px 20px;
+  /* changed padding and added width prperty */
   border-radius: 10px;
   border: 1px solid #48045f;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);

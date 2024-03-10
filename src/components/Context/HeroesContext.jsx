@@ -7,6 +7,7 @@ export const HeroesContextProvider = ({ children }) => {
   const [heroes, setHeroes] = useState([]);
   const [showError, setShowError] = useState(false);
   const [fetching, setFetching] = useState(true);
+  const [deck, setDeck] = useState([]);
 
   useEffect(() => {
     Promise.all([fetchRandomHero(), fetchRandomHero(), fetchRandomHero()])
@@ -33,8 +34,23 @@ export const HeroesContextProvider = ({ children }) => {
     setHeroes(updatedHeroes);
   };
 
+  const removeHeroFromDeck = (id) => {
+    const updatedDeck = deck.filter((hero) => hero.id !== id);
+    setDeck(updatedDeck);
+  };
+
+  const removeAllHeroesFromDeck = () => {
+    setDeck([]);
+  };
+
   const removeAllHeroes = () => {
     setHeroes([]);
+  };
+
+  const addToDeck = (hero) => {
+    if (!deck.some((deckHero) => deckHero.id === hero.id)) {
+      setDeck((prevState) => [...prevState, hero]);
+    }
   };
 
   return (
@@ -43,9 +59,13 @@ export const HeroesContextProvider = ({ children }) => {
         heroes,
         fetching,
         showError,
+        deck,
         addHero,
         removeHero,
         removeAllHeroes,
+        addToDeck,
+        removeHeroFromDeck,
+        removeAllHeroesFromDeck,
       }}
     >
       {children}

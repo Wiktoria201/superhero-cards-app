@@ -6,7 +6,8 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import Loader from "../../utils/Loader/Loader";
 
 const HeroesList = () => {
-  const { heroes, removeHero, fetching, showError } = useContext(HeroesContext);
+  const { heroes, removeHero, fetching, showError, addToDeck } =
+    useContext(HeroesContext);
 
   if (fetching) {
     return <Loader />;
@@ -45,12 +46,20 @@ const HeroesList = () => {
                 image={hero.image}
                 hero={hero}
               />
-              <button
-                onClick={() => removeHero(hero.id)}
-                className={styles.deleteBtn}
-              >
-                Delete
-              </button>
+              <div className={styles.btnContainer}>
+                <button
+                  onClick={() => removeHero(hero.id)}
+                  className={styles.deleteBtn}
+                >
+                  Delete
+                </button>
+                <button
+                  onClick={() => addToDeck(hero)}
+                  className={styles.deleteBtn}
+                >
+                  Add to Deck
+                </button>
+              </div>
             </div>
           ))
         )}

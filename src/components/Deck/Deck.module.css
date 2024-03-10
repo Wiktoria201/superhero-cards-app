@@ -1,0 +1,98 @@
+.container {
+  width: 50px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #a755c2;
+  margin: 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.deckIcon {
+  font-size: 50px;
+  color: #fff;
+  position: fixed;
+  right: 10px;
+  bottom: 15px;
+  z-index: 2;
+}
+
+.deckHeading {
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.heroList {
+  width: 100vw;
+  height: 100vh;
+  background-color: #a755c2;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  position: fixed;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0px 10px;
+}
+
+.herolistContainer {
+  display: flex;
+  gap: 5px;
+}
+
+.heroItem {
+  border: 1px solid #fff;
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.errorMessage {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.deleteIcon {
+  color: #fff;
+  font-size: 45px;
+}
+
+.clearBtn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 150px;
+  padding: 5px 7px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 1020px) {
+  .heroList {
+    width: 500px;
+    padding: 0px 20px;
+  }
+
+  .heroItem:hover {
+    background-color: #fff;
+    color: #a755c2;
+  }
+
+  .container {
+    top: 0;
+  }
+
+  .deckIcon {
+    top: 15px;
+  }
+}
