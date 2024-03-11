@@ -17,6 +17,8 @@
   padding: 20px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  /* ------------ */
+  animation: slideFromLeft 0.2s ease forwards;
 }
 
 .infoContainer {
@@ -99,5 +101,25 @@
   .heroInfo:hover {
     transform: translateY(-3px);
     box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  @keyframes slideFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 0.2;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }

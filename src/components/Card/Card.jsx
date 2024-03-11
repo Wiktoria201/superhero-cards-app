@@ -5,14 +5,12 @@ import { Link } from "react-router-dom";
 const placeholderImage = "/images/Placeholder.png";
 const Card = ({ id, name, image, powerstats }) => {
   const [imageSrc, setImageSrc] = useState(image?.url || placeholderImage);
-  const power =
-    powerstats?.power && powerstats.power !== "null" ? powerstats.power : "-";
-  const speed =
-    powerstats?.speed && powerstats.speed !== "null" ? powerstats.speed : "-";
-  const strength =
-    powerstats?.strength && powerstats.strength !== "null"
-      ? powerstats.strength
-      : "-";
+
+  const getStat = (value) => (value && value !== "null" ? value : "-");
+
+  const power = getStat(powerstats?.power);
+  const speed = getStat(powerstats?.speed);
+  const strength = getStat(powerstats?.strength);
 
   return (
     <Link to={`/heroes/${id}`} className={styles.linkStyle}>
