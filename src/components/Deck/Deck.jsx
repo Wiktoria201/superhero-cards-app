@@ -1,13 +1,18 @@
 import styles from "./Deck.module.css";
 import { CgCardSpades } from "react-icons/cg";
 import { CiSquareMinus } from "react-icons/ci";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { HeroesContext } from "../Context/HeroesContext";
 
 const Deck = () => {
   const { deck, removeHeroFromDeck, removeAllHeroesFromDeck } =
     useContext(HeroesContext);
   const [isVisible, setIsVisible] = useState(false);
+  const [deckCount, setDeckCount] = useState(0);
+
+  useEffect(() => {
+    setDeckCount(Math.min(deck.length, 6));
+  }, [deck]);
 
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
@@ -15,7 +20,9 @@ const Deck = () => {
 
   return (
     <div>
-      <div className={styles.container}></div>
+      <div className={styles.container}>
+        {deck.length > 0 && <div className={styles.deckCount}>{deckCount}</div>}
+      </div>
       <CgCardSpades className={styles.deckIcon} onClick={toggleVisibility} />
       {isVisible && (
         <div className={styles.heroList}>
