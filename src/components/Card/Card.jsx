@@ -7,7 +7,6 @@ const Card = ({ id, name, image, powerstats }) => {
   const [imageSrc, setImageSrc] = useState(image?.url || placeholderImage);
 
   const getStat = (value) => (value && value !== "null" ? value : "-");
-
   const power = getStat(powerstats?.power);
   const speed = getStat(powerstats?.speed);
   const strength = getStat(powerstats?.strength);
