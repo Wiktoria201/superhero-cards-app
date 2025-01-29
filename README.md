@@ -4,7 +4,7 @@ This is a superhero card generator that uses React.js and SuperHero API to rende
 
 ### Here is a link to the website:
 
-https://clever-haupia-0a999e.netlify.app
+https://superhero-cards.netlify.app/
 
 ### Technologies Used
 
